@@ -1,7 +1,5 @@
 # 🌐 Portfólio Pessoal - Vitor Vieira
 
-![Capa do Portfólio](img/img-perfil.jpg)
-
 Bem-vindo ao repositório do meu portfólio profissional! Este projeto foi desenvolvido com o objetivo de apresentar minhas habilidades como **Desenvolvedor Full Stack** e **Analista de Dados**, destacando meus projetos, certificações e áreas de atuação.
 
 ---
