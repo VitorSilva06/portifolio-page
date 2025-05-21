@@ -1,0 +1,363 @@
+:root {
+    --cor-destaque: #3a5d3e;     /* Verde oliva escuro */
+    --cor-fundo: #f5f5f3;        /* Bege claro */
+    --cor-texto: #1c1c1c;        /* Preto suave */
+    --cor-subtexto: #4a4a4a;     /* Cinza escuro */
+    --cor-hover: #2e4a31;        /* Verde oliva mais intenso */
+    --cor-card: #ffffff;         /* Branco puro para contraste */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-size: 5em;
+}
+
+.sub-titulo, .btn-contato {
+  font-size: 2rem;
+  color: var(--cor-destaque); 
+  margin-bottom: 20px;
+  border-left: 5px solid var(--cor-destaque);
+  padding-left: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.btn-contato {
+  background-color: transparent;
+  border: 2px solid var(--cor-destaque);
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-contato:hover {
+  background-color: var(--cor-destaque);
+  color: white;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 var(--cor-destaque);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px transparent;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--cor-destaque);
+    margin-top: 20px;
+}
+
+
+header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: var(--cor-destaque);
+}
+
+header p {
+    font-size: 1.2rem;
+    color: var(--cor-subtexto);
+    max-width: 700px;
+    margin: 20px auto 0;
+}
+
+section {
+    max-width: 1100px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--cor-card);
+    padding: 30px;
+    border-radius: 16px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px var(--cor-hover);
+}
+
+.card h3 {
+    color: var(--cor-destaque);
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--cor-subtexto);
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.icons i {
+    font-size: 2.5rem;
+    color: var(--cor-hover);
+    transition: transform 0.3s ease;
+}
+
+.icons i:hover {
+    transform: scale(1.3);
+    color: var(--cor-destaque);
+}
+
+.projetos-destaques {
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.projeto-card {
+  background-color: var(--cor-card);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(7, 29, 74, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(7, 29, 74, 0.2);
+}
+
+.projeto-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.projeto-card h3 {
+  color: var(--cor-destaque);
+  margin-bottom: 10px;
+}
+
+.certificacoes {
+    max-width: 1100px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.certificados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.certificado-card {
+    background-color: var(--cor-card);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 6px 18px rgba(7, 29, 74, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificado-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(7, 29, 74, 0.2);
+}
+
+.certificado-card h3 {
+    color: var(--cor-destaque);
+    margin-bottom: 10px;
+}
+
+.certificado-card p {
+    color: var(--cor-subtexto);
+    font-size: 1rem;
+}
+
+
+.projeto-card p {
+  color: var(--cor-subtexto);
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.btn-projeto {
+  background-color: var(--cor-destaque);
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-projeto:hover {
+  background-color: var(--cor-hover);
+}
+
+
+form {
+    background-color: var(--cor-card);
+    padding: 30px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input,
+select,
+textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    font-size: 20px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+input[type="submit"] {
+    background-color: var(--cor-destaque);
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--cor-hover);
+}
+
+footer {
+    text-align: center;
+    color: var(--cor-subtexto);
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+/*Responsividade:*/
+
+@media (max-width: 768px) {
+  .titulo {
+    flex-direction: column;
+    font-size: 2.5em;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .sub-titulo {
+    font-size: 1.5rem;
+    text-align: center;
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .btn-contato {
+    font-size: 1rem;
+    padding: 8px 16px;
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .cards,
+  .projetos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .foto-perfil {
+    width: 150px;
+    height: 150px;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .btn-projeto {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+
+  .projeto-card p {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+}
